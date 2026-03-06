@@ -1,181 +1,113 @@
-/* -------------------------------
-TECH4JUSTICE CLINIC – BOLD GLASS STYLE
--------------------------------*/
-
-/* Import Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
-
-/* Body */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
-  color: #1f2937;
-  overflow-x: hidden;
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#0f172a;
+color:white;
 }
 
-/* Navigation */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,0.65);
-  backdrop-filter: blur(22px);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  z-index: 100;
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#020617;
 }
 
-nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #1f2937;
-  font-weight: 700;
-  font-size: 18px;
-  transition: 0.3s;
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
 }
 
-nav a:hover { color: #0ea5e9; }
-
-/* Glass panels */
-.glass, .glass-hero, .card {
-  background: rgba(255,255,255,0.78);
-  backdrop-filter: blur(28px);
-  border-radius: 30px;
-  padding: 50px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
-  transition: transform 0.3s, box-shadow 0.3s;
+.hero{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(135deg,#6366f1,#06b6d4);
 }
 
-.glass:hover, .card:hover, .glass-hero:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 35px 60px rgba(0,0,0,0.15);
+.hero h2{
+font-size:48px;
 }
 
-/* Hero */
-.hero {
-  height: 95vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
+button{
+background:#f97316;
+border:none;
+padding:15px 25px;
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
 }
 
-.hero h1 {
-  font-size: 80px;
-  font-weight: 900;
-  margin: 0;
-  letter-spacing: 3px;
-  background: linear-gradient(90deg,#0ea5e9,#22d3ee,#38bdf8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.cards{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:60px;
 }
 
-.hero p {
-  margin-top: 25px;
-  font-size: 20px;
-  font-weight: 500;
-  opacity: 0.9;
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+width:250px;
+transition:0.3s;
 }
 
-.button {
-  margin-top: 35px;
-  padding: 16px 32px;
-  border-radius: 12px;
-  background: #0ea5e9;
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 17px;
-  display: inline-block;
-  transition: 0.3s;
+.card:hover{
+transform:translateY(-10px);
 }
 
-.button:hover { background: #0284c7; transform: scale(1.05); }
-
-/* Sections */
-.section {
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
+.content{
+max-width:900px;
+margin:auto;
+padding:50px;
 }
 
-.section-content { max-width: 950px; }
-
-/* Cards */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 35px;
-  margin-top: 50px;
+.steps{
+display:flex;
+gap:20px;
 }
 
-.card h3 {
-  margin-top:0;
-  font-size: 22px;
-  font-weight: 700;
+.step{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
 }
 
-.big-link {
-  font-size: 18px;
-  font-weight: 700;
-  display: block;
-  margin-top: 15px;
-  text-decoration: none;
-  color: #0f172a;
+.chat-container{
+max-width:700px;
+margin:auto;
+padding:40px;
 }
 
-.big-link:hover { color: #0ea5e9; }
-
-/* Chatbot embedding */
-.bot-space {
-  height: 420px;
-  border-radius: 18px;
-  border: 2px dashed rgba(0,0,0,0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  opacity: 0.8;
-  margin-top: 25px;
+.chat-window{
+height:400px;
+background:#1e293b;
+padding:20px;
+overflow-y:auto;
+border-radius:10px;
 }
 
-/* Complaints questions */
-.question {
-  margin-top: 25px;
-  padding: 22px;
-  background: rgba(255,255,255,0.6);
-  border-radius: 18px;
-  opacity:0.9;
+.chat-input{
+margin-top:15px;
+display:flex;
+gap:10px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 60px;
-  opacity: 0.8;
-  font-weight: 600;
-  font-size: 16px;
+.chat-input input{
+flex:1;
+padding:10px;
+border-radius:6px;
+border:none;
 }
 
-/* Floating blobs */
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(140px);
-  opacity: 0.38;
-  z-index: -1;
+.bot{
+color:#38bdf8;
 }
-.blob1 { width: 450px; height: 450px; background: #0ea5e9; top: -80px; left: -120px; }
-.blob2 { width: 350px; height: 350px; background: #22d3ee; bottom: 120px; right: -80px; }
 
-/* Responsive tweaks */
-@media(max-width:768px){
-  .hero h1 { font-size: 55px; }
-  .hero p { font-size: 18px; }
-  .card-grid { grid-template-columns: 1fr; }
+.user{
+text-align:right;
+color:#f97316;
 }
